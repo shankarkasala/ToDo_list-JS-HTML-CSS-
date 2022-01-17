@@ -29,10 +29,15 @@ form {
 form input,
 form button {
   padding: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: none;
   background: white;
 }
+/* input::placeholder {
+  color: lightgray;
+  font-size: 1rem;
+  letter-spacing: 0.1xcrem;
+} */
 form button {
   color: #d88771;
   background-color: white;
@@ -58,13 +63,17 @@ form button:hover {
 }
 .todo {
   margin: 0.5rem;
-
   background: white;
   color: black;
   font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 .todo li {
   flex: 1;
@@ -91,4 +100,48 @@ form button:hover {
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+  -moz-transform: translateY(8rem) rotateZ(20deg);
+  -ms-transform: translateY(8rem) rotateZ(20deg);
+  -o-transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #ff6f47;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.select:hover::after {
+  background-color: white;
+  color: #ff6f47;
 }
