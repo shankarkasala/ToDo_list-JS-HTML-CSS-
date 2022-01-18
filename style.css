@@ -1,24 +1,18 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
-/*sample*/
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-a {
-  text-decoration: none;
-}
 body {
-  background-image: linear-gradient(120deg, #e2c35d, #d88771);
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   color: white;
-  font-size: 16px;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
 }
 header {
-  font-size: 1rem;
+  font-size: 2rem;
 }
+
 header,
 form {
   min-height: 20vh;
@@ -29,27 +23,18 @@ form {
 form input,
 form button {
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border: none;
   background: white;
 }
-/* input::placeholder {
-  color: lightgray;
-  font-size: 1rem;
-  letter-spacing: 0.1xcrem;
-} */
 form button {
-  color: #d88771;
-  background-color: white;
+  color: #ff6f47;
+  background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
 form button:hover {
-  background-color: #d88771;
+  background: #ff6f47;
   color: white;
 }
 .todo-container {
@@ -57,27 +42,29 @@ form button:hover {
   justify-content: center;
   align-items: center;
 }
+
 .todo-list {
   min-width: 30%;
   list-style: none;
 }
+
 .todo {
   margin: 0.5rem;
   background: white;
+  font-size: 1.5rem;
   color: black;
-  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  transition: all 1s ease;
+}
+.filter-todo {
+  padding: 1rem;
 }
 .todo li {
   flex: 1;
 }
+
 .trash-btn,
 .complete-btn {
   background: #ff6f47;
@@ -88,34 +75,40 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(62, 240, 62);
+  background: rgb(11, 212, 162);
 }
 .todo-item {
   padding: 0rem 0.5rem;
 }
+
 .fa-trash,
 .fa-check {
   pointer-events: none;
 }
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
 }
-.fall {
-  transform: translateY(8rem) rotateZ(20deg);
-  -webkit-transform: translateY(8rem) rotateZ(20deg);
-  -moz-transform: translateY(8rem) rotateZ(20deg);
-  -ms-transform: translateY(8rem) rotateZ(20deg);
-  -o-transform: translateY(8rem) rotateZ(20deg);
-  opacity: 0;
-}
+
+/*CUSTOM SELECTOR */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  outline: none;
-  border: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
 }
+
+/* Custom Select */
 .select {
   margin: 1rem;
   position: relative;
@@ -123,25 +116,24 @@ select {
 }
 select {
   color: #ff6f47;
-  width: 10rem;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
-  padding: 1rem;
+  width: 12rem;
 }
+/* Arrow */
 .select::after {
   content: "\25BC";
   position: absolute;
-  background-color: #ff6f47;
   top: 0;
   right: 0;
   padding: 1rem;
+  background: #ff6f47;
+  cursor: pointer;
   pointer-events: none;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
+/* Transition */
+/*
 .select:hover::after {
-  background-color: white;
-  color: #ff6f47;
+  transform: scale(1.5);
 }
+*/
