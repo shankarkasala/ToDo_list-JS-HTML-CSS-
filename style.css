@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+  /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
+  background: linear-gradient(to right, #ee0979, #ff6a00);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -27,14 +29,25 @@ form button {
   border: none;
   background: white;
 }
+form input {
+  padding-left: 15px;
+  color: gray;
+  border-radius: 5px 0px 0px 5px;
+  -webkit-border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  -ms-border-radius: 5px 0px 0px 5px;
+  -o-border-radius: 5px 0px 0px 5px;
+}
 form button {
-  color: #ff6f47;
+  /* color: #ff6f47; */
+  color: #f42c4c;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #ff6f47;
+  /* background: #ff6f47; */
+  background: #f42c4c;
   color: white;
 }
 .todo-container {
@@ -51,12 +64,17 @@ form button:hover {
 .todo {
   margin: 0.5rem;
   background: white;
+  border-radius: 5px;
   font-size: 1.5rem;
   color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .filter-todo {
   padding: 1rem;
@@ -67,7 +85,8 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  /* background: #ff6f47; */
+  background: #f42c4c;
   color: white;
   border: none;
   padding: 1rem;
@@ -115,10 +134,15 @@ select {
   overflow: hidden;
 }
 select {
-  color: #ff6f47;
+  color: #f42c4c;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 /* Arrow */
 .select::after {
@@ -127,9 +151,14 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  background: #f42c4c;
   cursor: pointer;
   pointer-events: none;
+  border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -ms-border-radius: 0px 5px 5px 0px;
+  -o-border-radius: 0px 5px 5px 0px;
 }
 /* Transition */
 /*
